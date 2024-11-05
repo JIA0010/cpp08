@@ -1,0 +1,9 @@
+Exercise 02: Mutated abomination
+概要
+STLのstd::stackコンテナを拡張して、イテレータを追加するMutantStackクラスを作成します。
+
+仕様
+MutantStackクラスは、std::stackをベースにすべてのメンバ関数を提供し、さらにイテレータ機能を持たせます。
+このため、std::stackを操作する従来の関数に加え、begin()およびend()イテレータも提供します。
+
+MutantStackとstd::listを使用して同じコードを実行し、同一の出力が得られるかテストすることを推奨します。
