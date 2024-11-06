@@ -84,3 +84,12 @@ TEST(SpanTest, Overflow) {
   sp.addNumber(11);
   EXPECT_THROW(sp.addNumber(12), std::exception);
 }
+
+//10000個の要素を追加した場合のテスト
+TEST(SpanTest, LargeSpan) {
+  Span sp = Span(10000);
+  for (int i = 0; i < 10000; i++)
+    sp.addNumber(i);
+  EXPECT_EQ(sp.shortestSpan(), 1);
+  EXPECT_EQ(sp.longestSpan(), 9999);
+}
