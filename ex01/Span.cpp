@@ -22,6 +22,13 @@ void Span::addNumber(int n)
     _numbers.push_back(n);
 }
 
+void Span::addNumber(const std::vector<int>& numbers) {
+    if (_numbers.size() + numbers.size() > _size) {
+        throw std::exception();
+    }
+    _numbers.insert(_numbers.end(), numbers.begin(), numbers.end());
+}
+
 int Span::shortestSpan()
 {
     if (_numbers.size() <= 1)

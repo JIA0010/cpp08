@@ -1,5 +1,6 @@
 #include "Span.hpp"
 
+//オーバーフロー対策をしていない
 int main()
 {
     try{
@@ -9,6 +10,10 @@ int main()
         sp.addNumber(17);
         sp.addNumber(9);
         sp.addNumber(11);
+
+        //addNumber with vector
+        std::vector<int> v = {1, 2, 3, 4, 5};
+        sp.addNumber(v);
 
         //overflows(will throw exception)
         // sp.addNumber(12);
